@@ -82,6 +82,9 @@ export const StyledImg = styled.img`
   z-index: 1;
  
   width: 200px;
+  @media (min-width: 700px) {
+    width: 135px;
+  }
   @media (min-width: 900px) {
     width: 200px;
   }
@@ -95,6 +98,9 @@ export const StyledImgBack = styled.img`
   z-index: 2;
   width: 360px;
   position: absolute;
+  @media (min-width: 700px) {
+    width: 240px;
+  }
   @media (min-width: 900px) {
     width: 350px;
   }
