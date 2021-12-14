@@ -75,10 +75,12 @@ export const StyledLogo = styled.img`
 `;
 
 export const StyledImg = styled.img`
-  box-shadow: 0px 5px 11px 2px rgba(0, 0, 0, 0.7);
-  border: 4px dashed rgba(100, 100, 100);
-  background-color: var(--accent);
+  ${'' /* box-shadow: 0px 5px 11px 2px rgba(0, 0, 0, 0.7); */}
+  ${'' /* border: 4px dashed rgba(100, 100, 100); */}
+  ${'' /* background-color: var(--accent); */}
   border-radius: 100%;
+  z-index: 1;
+ 
   width: 200px;
   @media (min-width: 900px) {
     width: 250px;
@@ -87,6 +89,19 @@ export const StyledImg = styled.img`
     width: 300px;
   }
   transition: width 0.5s;
+`;
+
+export const StyledImgBack = styled.img`
+  z-index: 2;
+  width: 360px;
+  position: absolute;
+  @media (min-width: 900px) {
+    width: 350px;
+  }
+  @media (min-width: 1000px) {
+    width: 530px;
+  }
+ 
 `;
 
 export const StyledLink = styled.a`
@@ -201,13 +216,15 @@ function App() {
         style={{ padding: 24, backgroundColor: "var(--primary-text)" }}
         image={CONFIG.SHOW_BACKGROUND ? "/config/images/bg.png" : null}
       >
-        
+
         <s.SpacerSmall />
         <ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
           <s.Container flex={1} jc={"center"} ai={"center"}>
             <StyledImg alt={"example"} src={"/config/images/example.gif"} />
+            <StyledImgBack alt={"example"} src={"/config/images/Example2.png"} />
+
           </s.Container>
-          
+
           <s.SpacerLarge />
           <s.Container
             flex={2}
@@ -276,7 +293,7 @@ function App() {
                 </s.TextDescription>
                 <s.SpacerSmall />
                 {blockchain.account === "" ||
-                blockchain.smartContract === null ? (
+                  blockchain.smartContract === null ? (
                   <s.Container ai={"center"} jc={"center"}>
                     <s.TextDescription
                       style={{
@@ -316,7 +333,7 @@ function App() {
                       style={{
                         textAlign: "center",
                         color: "var(--secondary)",
-                        fontSize:24
+                        fontSize: 24
                       }}
                     >
                       {feedback}
@@ -379,6 +396,7 @@ function App() {
               src={"/config/images/example.gif"}
               style={{ transform: "scaleX(-1)" }}
             />
+            <StyledImgBack alt={"example"} src={"/config/images/Example2.png"} />
           </s.Container>
         </ResponsiveWrapper>
         <s.SpacerMedium />
