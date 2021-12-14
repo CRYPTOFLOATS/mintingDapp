@@ -89,7 +89,7 @@ export const StyledImg = styled.img`
     width: 200px;
   }
   @media (min-width: 1000px) {
-    width: 270px;
+    width: 230px;
   }
   transition: width 0.5s;
 `;
@@ -105,7 +105,7 @@ export const StyledImgBack = styled.img`
     width: 350px;
   }
   @media (min-width: 1000px) {
-    width: 450px;
+    width: 380px;
   }
  
 `;
