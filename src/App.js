@@ -70,8 +70,8 @@ export const StyledLogo = styled.img`
   @media (min-width: 767px) {
     width: 300px;
   }
-  transition: width 0.5s;
-  transition: height 0.5s;
+  
+  
 `;
 
 export const StyledImg = styled.img`
@@ -89,9 +89,9 @@ export const StyledImg = styled.img`
     width: 200px;
   }
   @media (min-width: 1000px) {
-    width: 230px;
+    width: 220px;
   }
-  transition: width 0.5s;
+  
 `;
 
 export const StyledImgBack = styled.img`
